@@ -30,9 +30,12 @@ fn html_manual_front() -> Body {
     let mut output = "".to_string();
 
     entries.iter().for_each(|entry| {
-        let link = format!("\"http://localhost:12345/manual/{}\"", entry);
-        output.push_str(format!("<p><a href={}>{}</a></p>", link, entry).as_str())
+        output.push_str(format!("<p>{}</p>", a_tag(entry, format!("http://localhost:12345/manual/{}", entry))).as_str())
     });
         
     Body::from(html_page(output.as_str()))
+}
+
+fn a_tag(content: &str, link: &str) -> String {
+    return format!("<a href=\"{}\">{}</a>", link, content)
 }
