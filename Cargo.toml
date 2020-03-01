@@ -1,5 +1,5 @@
 [package]
-name = "personal-computer"
+name = "personal-server"
 version = "0.1.0"
 authors = ["Geirmund Simonsen <geirmund.simonsen@nav.no>"]
 edition = "2018"

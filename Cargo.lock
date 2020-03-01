@@ -369,7 +369,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "personal-computer"
+name = "personal-server"
 version = "0.1.0"
 dependencies = [
  "futures",
