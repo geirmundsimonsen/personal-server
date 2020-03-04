@@ -1,5 +1,6 @@
 mod echo;
 mod manual;
+mod templating;
 
 use std::convert::Infallible;
 use std::net::SocketAddr;
@@ -19,7 +20,7 @@ async fn hello_world(req: Request<Body>) -> Result<Response<Body>, hyper::error:
     } else {
         *response.status_mut() = StatusCode::NOT_FOUND;
         Ok(response)
-    }
+    } 
 }
 
 #[tokio::main]
